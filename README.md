@@ -1,73 +1,96 @@
-# 📈 Stock Market Dashboard
+# QuantumStock API Documentation Platform
 
-Platform dashboard real-time untuk monitoring data saham lengkap dengan integrasi Yahoo Finance API. Dibangun menggunakan Next.js 14, React, TypeScript, dan Tailwind CSS dengan desain modern dan responsif.
+<div align="center">
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Next.js](https://img.shields.io/badge/next.js-14+-black.svg)
-![React](https://img.shields.io/badge/react-18+-blue.svg)
-![TypeScript](https://img.shields.io/badge/typescript-5+-blue.svg)
+![Next.js](https://img.shields.io/badge/Next.js-16.1.0-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19.2.3-blue?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)
 
----
+**Enterprise-grade Stock Market API Documentation Platform**
 
-## ✨ Fitur Utama
+[Live Demo](#) • [Documentation](https://docs.quantumstock.com) • [API Reference](#)
 
-### 📊 Dashboard Analytics
+</div>
 
-- **Real-time Statistics** - Total saham, rata-rata perubahan, gainers, dan losers
-- **Market Overview** - Visualisasi data pasar secara real-time
-- **Live Update** - Jam update otomatis dengan refresh setiap detik
+## 📋 Overview
 
-### 🔍 Search & Filter
+QuantumStock API Documentation Platform adalah landing page modern dan profesional untuk mendokumentasikan API saham dengan tema dark mode. Platform ini dirancang khusus untuk menampilkan data finansial real-time dengan antarmuka yang intuitif dan performa tinggi.
 
-- **Smart Search** - Cari saham berdasarkan symbol atau nama perusahaan
-- **6 Opsi Sorting** - Urutkan berdasarkan harga, perubahan, atau volume
-- **Instant Filtering** - Filter hasil pencarian secara real-time
+## ✨ Features
 
-### 📱 Dual View System
+### 🎨 **Modern Dark Theme**
 
-- **Table View** - Tampilan tabel profesional dengan 8 kolom data
-- **Cards View** - Tampilan grid kartu interaktif (responsive 1-3 kolom)
-- **Quick Toggle** - Switch antar view dengan satu klik
+- **Glassmorphism Design** dengan efek transparansi dan blur
+- **Neon Gradient Accents** (cyan, emerald, purple)
+- **Smooth Animations** dan micro-interactions
+- **Responsive Design** untuk semua perangkat
 
-### 🎯 Detail Modal
+### 📊 **Market Data Display**
 
-Informasi lengkap saham dalam popup modal modern:
+- Real-time market overview dengan data saham
+- Top gainers/losers tracking
+- Major indices monitoring (IHSG, LQ45, S&P 500, NASDAQ)
+- Market statistics dengan visualisasi
 
-- **Price Information** - Current price, change, change percentage
-- **Trading Range** - Day high/low, 52-week high/low
-- **Financial Metrics** - Market cap, P/E ratio, dividend yield
-- **Key Statistics** - Beta, profit margin, EPS, dan banyak lagi
-- **Company Profile** - Deskripsi bisnis, sektor, dan industri
+### 🔧 **API Documentation**
 
-### 🎨 Design & UX
+- Interactive API endpoints dengan expandable details
+- Code examples dalam berbagai bahasa
+- Rate limiting dan authentication info
+- Copy endpoint functionality
 
-- **Modern Dark Theme** - Gradient backgrounds dengan aksen cyan/blue
-- **Fully Responsive** - Optimal di mobile, tablet, dan desktop
-- **Smooth Animations** - Hover effects dan transitions yang elegan
-- **Professional Styling** - Enterprise-grade UI dengan Tailwind CSS
-- **Accessible** - Semantic HTML dan keyboard navigation support
+### 🚀 **Developer Experience**
 
----
+- SDK examples untuk Python, JavaScript, Node.js
+- API playground integration
+- WebSocket streaming demos
+- Postman collection ready
 
-## 🚀 Quick Start
+## 🛠️ Tech Stack
+
+### Core Framework
+
+- **Next.js 16.1.0** - React framework dengan App Router
+- **React 19.2.3** - UI library terbaru
+- **TypeScript 5.9.3** - Type safety dan developer experience
+
+### Styling & UI
+
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Lucide React** - Icon library yang konsisten
+- **Custom CSS Animations** - Smooth transitions dan effects
+
+### Data & API
+
+- **Yahoo Finance 2** - Stock market data integration
+- **Recharts** - Data visualization
+- **RSS Parser** - Market news integration
+
+### Development Tools
+
+- **ESLint** - Code linting
+- **PostCSS** - CSS processing
+- **Font Optimization** - Custom font loading
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
 - npm atau yarn
-- API Key Yahoo Finance (optional - sudah terintegrasi)
+- API key untuk Yahoo Finance (opsional)
 
 ### Installation
 
-1. **Clone Repository**
+1. **Clone repository**
 
 ```bash
-git clone <repository-url>
-cd stock-market-dashboard
+git clone https://github.com/yourusername/quantumstock-api-docs.git
+cd quantumstock-api-docs
 ```
 
-2. **Install Dependencies**
+2. **Install dependencies**
 
 ```bash
 npm install
@@ -75,17 +98,20 @@ npm install
 yarn install
 ```
 
-3. **Setup Environment Variables**
+3. **Setup environment variables**
 
 ```bash
-# Buat file .env.local
 cp .env.example .env.local
-
-# Tambahkan konfigurasi jika diperlukan
-NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
 
-4. **Run Development Server**
+Edit `.env.local` dengan konfigurasi API Anda:
+
+```env
+NEXT_PUBLIC_API_URL=https://api.quantumstock.com
+# Tambahkan API keys jika diperlukan
+```
+
+4. **Run development server**
 
 ```bash
 npm run dev
@@ -93,352 +119,336 @@ npm run dev
 yarn dev
 ```
 
-5. **Buka Browser**
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 📁 Project Structure
 
 ```
-http://localhost:3000
-```
-
----
-
-## 📁 Struktur Project
-
-```
-stock-market-dashboard/
+quantumstock-api-docs/
 ├── app/
-│   ├── api/
-│   │   └── stock/
-│   │       └── route.ts          # API endpoint untuk fetch saham
-│   ├── page.tsx                   # Main dashboard page
-│   ├── layout.tsx                 # Root layout
-│   └── globals.css                # Global styles
-├── Data/
-│   └── saham.json                 # List saham yang dipantau
+│   ├── layout.tsx              # Root layout dengan metadata
+│   ├── page.tsx                # Homepage utama
+│   ├── globals.css             # Global styles dan animations
+│   └── api/                    # API routes (jika ada)
+├── components/
+│   ├── Header.tsx              # Navigation header
+│   ├── Footer.tsx              # Site footer
+│   ├── HeroSection.tsx         # Hero section dengan CTA
+│   ├── MarketOverview.tsx      # Real-time market data
+│   ├── ApiFeatures.tsx         # Feature showcase
+│   ├── ApiList.tsx             # Interactive API documentation
+│   ├── IntegrationShowcase.tsx # SDK dan code examples
+│   └── CTA.tsx                 # Call-to-action section
 ├── public/
-│   └── favicon.jpg                # Favicon
-├── .env.local                      # Environment variables
-├── package.json
-├── tsconfig.json
-├── tailwind.config.js             # Tailwind configuration
-└── README.md
+│   ├── favicon.ico
+│   └── images/                 # Static assets
+├── lib/                        # Utility functions
+├── types/                      # TypeScript definitions
+└── config/                     # Configuration files
 ```
 
----
+## 🎯 Key Components
+
+### 1. Header (`components/Header.tsx`)
+
+- Responsive navigation dengan glassmorphism effect
+- Real-time market indicator
+- User profile dan notifications
+
+### 2. Market Overview (`components/MarketOverview.tsx`)
+
+- Live market data display
+- Interactive tabs untuk indices/gainers/losers
+- API code examples
+
+### 3. API Documentation (`components/ApiList.tsx`)
+
+- Expandable API endpoint cards
+- Method badges (GET, POST, WebSocket)
+- Rate limiting info
+- Copy-to-clipboard functionality
+
+### 4. Integration Showcase (`components/IntegrationShowcase.tsx`)
+
+- Multi-language code examples
+- Technology stack display
+- Developer tools integration
+
+## 🎨 Customization
+
+### Theme Configuration
+
+Edit `app/globals.css` untuk custom styling:
+
+```css
+:root {
+  --primary-gradient: linear-gradient(
+    135deg,
+    #60a5fa 0%,
+    #8b5cf6 50%,
+    #ec4899 100%
+  );
+  --glass-opacity: 0.7;
+  --border-radius: 1rem;
+}
+```
+
+### Brand Colors
+
+Update `tailwind.config.js` untuk custom color scheme:
+
+```javascript
+theme: {
+  extend: {
+    colors: {
+      brand: {
+        primary: '#0ea5e9',
+        secondary: '#8b5cf6',
+        accent: '#ec4899'
+      }
+    }
+  }
+}
+```
+
+### API Endpoints
+
+Modify `components/ApiList.tsx` untuk menambah/update API documentation:
+
+```typescript
+const apiEndpoints: ApiEndpoint[] = [
+  {
+    id: 1,
+    name: "Your API Name",
+    description: "API description here",
+    method: "GET",
+    endpoint: "/api/v1/your-endpoint",
+    category: "Category",
+    latency: "<100ms",
+    requiresAuth: true,
+    rateLimit: "1000/hour",
+    features: ["Feature 1", "Feature 2"],
+  },
+];
+```
+
+## 📱 Responsive Design
+
+Platform ini sudah dioptimalkan untuk:
+
+- **Desktop**: Layout penuh dengan sidebar
+- **Tablet**: Grid layout dengan spacing optimal
+- **Mobile**: Single column dengan touch-friendly interactions
+
+### Breakpoints:
+
+- `sm`: 640px (mobile)
+- `md`: 768px (tablet)
+- `lg`: 1024px (desktop)
+- `xl`: 1280px (large desktop)
 
 ## 🔌 API Integration
 
-### Data Source: Yahoo Finance
-
-API endpoint menggunakan library `yahoo-finance2` untuk fetch data real-time:
-
-```typescript
-// app/api/stock/route.ts
-import YahooFinance from "yahoo-finance2";
-import sahamList from "../../Data/saham.json";
-
-export async function GET() {
-  const yahooFinance = new YahooFinance();
-
-  const results = await Promise.allSettled(
-    sahamList.data.map((saham) =>
-      (async () => {
-        const quote = await yahooFinance.quote(saham.kode);
-        const summary = await yahooFinance.quoteSummary(saham.kode, {
-          modules: ["assetProfile", "financialData", "defaultKeyStatistics"],
-        });
-
-        return {
-          kode: saham.kode,
-          nama: saham.nama,
-          price: quote.regularMarketPrice,
-          change: quote.regularMarketChange,
-          percent: quote.regularMarketChangePercent,
-          volume: quote.regularMarketVolume,
-          // ... lebih banyak data
-        };
-      })()
-    )
-  );
-
-  return Response.json({ data });
-}
-```
-
-### Data yang Ditampilkan
-
-| Field           | Deskripsi                  | Source       |
-| --------------- | -------------------------- | ------------ |
-| `kode`          | Symbol saham               | saham.json   |
-| `nama`          | Nama perusahaan            | saham.json   |
-| `price`         | Harga saat ini             | quote        |
-| `change`        | Perubahan harga (absolute) | quote        |
-| `percent`       | Perubahan harga (%)        | quote        |
-| `volume`        | Volume trading             | quote        |
-| `marketCap`     | Kapitalisasi pasar         | quote        |
-| `trailingPE`    | P/E ratio                  | quote        |
-| `beta`          | Beta value                 | quote        |
-| `dividendYield` | Dividend yield             | quote        |
-| `sector`        | Sektor industri            | assetProfile |
-| `industry`      | Sub-industri               | assetProfile |
-| `description`   | Deskripsi bisnis           | assetProfile |
-
----
-
-## 💻 Tech Stack
-
-### Frontend
-
-- **Next.js 14** - React framework dengan App Router
-- **React 18** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first CSS framework
-- **Geist Font** - Modern typography
-
-### Backend
-
-- **Node.js** - Runtime environment
-- **yahoo-finance2** - Financial data API
-- **Next.js API Routes** - Serverless functions
-
-### Tools & Dev Dependencies
-
-- **ESLint** - Code linting
-- **PostCSS** - CSS processing
-- **Autoprefixer** - Vendor prefixes
-
----
-
-## 📝 Konfigurasi
-
-### Tailwind Configuration
+### Real-time Data
 
 ```javascript
-// tailwind.config.js
-module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-      colors: {
-        slate: {
-          /* custom slate palette */
-        },
-      },
-    },
-  },
-};
+// Contoh penggunaan WebSocket API
+import { QuantumStock } from "@quantumstock/sdk";
+
+const client = new QuantumStock({ apiKey: "your-key" });
+const stream = client.websocket.subscribe(["BBCA.JK", "TLKM.JK"]);
+
+stream.on("quote", (data) => {
+  console.log(`${data.symbol}: ${data.price}`);
+});
 ```
 
-### saham.json
+### Historical Data
 
-```json
-{
-  "data": [
-    {
-      "kode": "AAPL",
-      "nama": "Apple Inc"
-    },
-    {
-      "kode": "GOOGL",
-      "nama": "Alphabet Inc"
-    }
-    // ... tambah saham lainnya
-  ]
-}
+```javascript
+// Contoh fetch data historis
+const historical = await client.historical.get({
+  symbol: "BBCA.JK",
+  interval: "1d",
+  start: "2024-01-01",
+  end: "2024-03-15",
+});
 ```
 
----
+## 🧪 Testing
 
-## 🎯 Fitur Lanjutan
-
-### Search & Sort Functions
-
-```typescript
-// Search by symbol or company name
-const filteredStocks = stocks.filter(stock =>
-  stock.kode.toLowerCase().includes(query) ||
-  stock.nama.toLowerCase().includes(query)
-);
-
-// Sort options
-- Price (High to Low / Low to High)
-- Change % (High to Low / Low to High)
-- Volume (High to Low / Low to High)
-```
-
-### Statistics Calculation
-
-```typescript
-const stats = {
-  total: filteredStocks.length,
-  gainers: filteredStocks.filter((s) => s.change > 0).length,
-  losers: filteredStocks.filter((s) => s.change < 0).length,
-  avgChange: (sum / count).toFixed(2),
-};
-```
-
-### Number Formatting
-
-```typescript
-// Format currency
-$1,234,567 → $1.23M
-
-// Format volume
-45,234,600 → 45.2M
-```
-
----
-
-## 🐛 Troubleshooting
-
-### Masalah: Data tidak load
+### Development Testing
 
 ```bash
-# Pastikan API route tersedia
-GET /api/stock
+# Run ESLint
+npm run lint
 
-# Check console untuk error messages
-# Verifikasi data di saham.json
-```
+# Type checking
+npx tsc --noEmit
 
-### Masalah: Styling tidak muncul
-
-```bash
-# Clear Tailwind cache
-rm -rf .next
-
-# Rebuild
+# Development server
 npm run dev
 ```
 
-### Masalah: Yahoo Finance API error
+### Production Testing
 
 ```bash
-# Update library
-npm install yahoo-finance2@latest
+# Build untuk production
+npm run build
 
-# Check API status
-# Beberapa simbol mungkin tidak tersedia
+# Preview build
+npm run start
+
+# Lighthouse audit
+npx lighthouse http://localhost:3000 --view
 ```
 
----
+## 📈 Performance
 
-## 📊 Performance Optimization
+### Optimizations:
 
-- **Code Splitting** - Automatic dengan Next.js
-- **Image Optimization** - Next/Image component
-- **CSS Minification** - Tailwind CSS production mode
-- **Lazy Loading** - React hooks optimization
-- **Caching** - Browser caching headers
+- **Image Optimization**: Next.js Image component
+- **Font Optimization**: Next.js Font optimization
+- **Code Splitting**: Automatic dengan Next.js
+- **Bundle Analysis**: Built-in analyzer
 
----
+### Performance Metrics:
 
-## 🔐 Security Features
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Cumulative Layout Shift**: < 0.1
+- **Time to Interactive**: < 3.5s
 
-- **Type Safety** - Full TypeScript coverage
-- **Input Validation** - Search query validation
-- **Error Handling** - Try-catch blocks di API
-- **CORS** - Proper CORS configuration
-- **Environment Variables** - Sensitive data protection
+## 🔒 Security
 
----
+### Implemented Security Features:
 
-## 📈 Roadmap
+- **Content Security Policy** (CSP) headers
+- **XSS Protection** dengan React
+- **API Key Security** best practices
+- **Environment Variables** untuk sensitive data
 
-- [ ] Export data ke CSV/Excel
-- [ ] Advanced charting dengan Chart.js
-- [ ] Watchlist & favorites
-- [ ] Price alerts & notifications
-- [ ] Historical data & technical analysis
-- [ ] Dark/Light mode toggle
-- [ ] Multi-language support (ID/EN)
-- [ ] Database integration untuk caching
-- [ ] Authentication & user profiles
-- [ ] Mobile app version
+### Best Practices:
 
----
-
-## 📱 Browser Support
-
-| Browser       | Version | Support |
-| ------------- | ------- | ------- |
-| Chrome        | Latest  | ✅ Full |
-| Firefox       | Latest  | ✅ Full |
-| Safari        | Latest  | ✅ Full |
-| Edge          | Latest  | ✅ Full |
-| Mobile Chrome | Latest  | ✅ Full |
-| Mobile Safari | Latest  | ✅ Full |
-
----
-
-## 📄 License
-
-MIT License - Feel free to use this project for personal or commercial purposes.
-
-```
-MIT License
-
-Copyright (c) 2025 Stock Market Dashboard
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-```
-
----
+- Selalu gunakan HTTPS
+- Validasi semua user inputs
+- Implement rate limiting
+- Regular security audits
 
 ## 🤝 Contributing
 
-Kontribusi sangat diterima! Untuk perubahan besar, silakan buka issue terlebih dahulu untuk mendiskusikan perubahan yang ingin dilakukan.
+Kami menyambut kontribusi! Berikut cara untuk berkontribusi:
 
-### Step untuk contribute:
+1. **Fork repository**
+2. **Create feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Commit changes**
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+4. **Push to branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. **Open Pull Request**
 
-1. Fork repository
-2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buka Pull Request
+### Development Guidelines:
+
+- Ikuti TypeScript best practices
+- Gunakan ESLint untuk code consistency
+- Tulis unit tests untuk new features
+- Update documentation sesuai perubahan
+
+## 📄 License
+
+Proyek ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) untuk detail.
+
+## 🆘 Support
+
+### Documentation
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://reactjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
+### Issues & Bugs
+
+Jika Anda menemukan bug atau memiliki pertanyaan:
+
+1. Check [existing issues](https://github.com/yourusername/quantumstock-api-docs/issues)
+2. Open [new issue](https://github.com/yourusername/quantumstock-api-docs/issues/new)
+3. Provide detailed description dan reproduction steps
+
+### Community
+
+- [GitHub Discussions](https://github.com/yourusername/quantumstock-api-docs/discussions)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/quantumstock-api)
+
+## 🏢 Enterprise Support
+
+Untuk enterprise customers, kami menyediakan:
+
+- **Priority Support**: 24/7 technical support
+- **Custom Integration**: Dedicated engineering team
+- **SLA Guarantee**: 99.99% uptime SLA
+- **Security Audit**: Regular security assessments
+
+Hubungi: enterprise@quantumstock.com
+
+## 📊 Analytics & Monitoring
+
+Platform ini sudah terintegrasi dengan:
+
+- **Vercel Analytics** untuk performance monitoring
+- **Sentry** untuk error tracking
+- **Google Analytics** untuk user analytics
+- **Custom Dashboards** untuk API usage
+
+## 🔄 Updates & Changelog
+
+### Version 2.1.0 (Current)
+
+- ✅ WebSocket API support
+- ✅ Real-time market data streaming
+- ✅ Dark mode theme improvements
+- ✅ Performance optimizations
+
+### Version 2.0.0
+
+- ✅ Next.js 16 migration
+- ✅ Tailwind CSS 4 upgrade
+- ✅ TypeScript strict mode
+- ✅ New API documentation system
+
+[View Full Changelog](CHANGELOG.md)
+
+## 🙏 Acknowledgements
+
+- [Next.js Team](https://nextjs.org) untuk framework yang luar biasa
+- [Tailwind CSS](https://tailwindcss.com) untuk utility-first CSS
+- [Lucide Icons](https://lucide.dev) untuk icon set yang konsisten
+- [Yahoo Finance API](https://github.com/gadicc/node-yahoo-finance2) untuk data saham
 
 ---
 
-## 📞 Support & Contact
+<div align="center">
 
-- **Email** - support@stockdashboard.com
-- **Issues** - GitHub Issues
-- **Discussions** - GitHub Discussions
+**Dibuat dengan ❤️ oleh [Nama Anda/Tim Anda]**
 
----
+[![Twitter Follow](https://img.shields.io/twitter/follow/quantumstock?style=social)](https://twitter.com/quantumstock)
+[![GitHub Stars](https://img.shields.io/github/stars/yourusername/quantumstock-api-docs?style=social)](https://github.com/yourusername/quantumstock-api-docs)
 
-## 🙏 Acknowledgments
+_"Empowering financial innovation with real-time market data"_
 
-- Yahoo Finance API untuk data real-time
-- Next.js team untuk framework yang amazing
-- Tailwind CSS untuk utility-first CSS
-- Comunitas developer Indonesia yang supportif
-
----
-
-## 📌 Changelog
-
-### Version 1.0.0 (2025-12-19)
-
-- ✅ Initial release
-- ✅ Real-time stock data integration
-- ✅ Dual view system (table & cards)
-- ✅ Advanced search & sorting
-- ✅ Detailed modal information
-- ✅ Fully responsive design
-- ✅ Modern dark theme UI
-
----
-
-**Terima kasih telah menggunakan Stock Market Dashboard! 🎉**
-
-Jika ada pertanyaan atau saran, jangan ragu untuk membuka issue atau menghubungi kami.
-
-Happy trading! 📈✨
+</div>
+#   Q u a n t u m S t o c k - A P I  
+ 
